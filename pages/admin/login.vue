@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 import { useForm } from "vue-hooks-form";
 
+interface Credentials {
+  email: string;
+  password: string;
+}
+
 useHead({
   title: "Admin - Login",
 });
@@ -16,7 +21,15 @@ const fields = {
 };
 
 const onSubmit = handleSubmit((formData) => {
-  console.log(formData);
+  const { email, password } = formData as Credentials;
+
+  if (email === "admin@domain.com" && password === "password") {
+    window.location.href = "/admin/home";
+
+    return;
+  }
+
+  alert("Incorrect/invalid account credentials provided");
 });
 </script>
 
@@ -30,7 +43,7 @@ const onSubmit = handleSubmit((formData) => {
           <p>Email</p>
           <input
             type="email"
-            v-model="fields.email"
+            v-model="fields.email.value"
             :ref="fields.email.ref"
             class="w-full h-[40px] text-xs border border-gray-400 rounded-md px-3"
             required
@@ -41,7 +54,7 @@ const onSubmit = handleSubmit((formData) => {
           <p>Password</p>
           <input
             type="password"
-            v-model="fields.password"
+            v-model="fields.password.value"
             :ref="fields.password.ref"
             class="w-full h-[40px] text-xs border border-gray-400 rounded-md px-3"
             required
