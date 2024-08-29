@@ -28,12 +28,24 @@ const onSubmit = handleSubmit((formData) => {
       <form class="flex flex-col gap-y-3 mt-8" @submit="onSubmit">
         <div class="flex flex-col gap-y-2">
           <p>Email</p>
-          <input type="email" class="w-full h-[40px] text-xs border border-gray-400 rounded-md px-3" required />
+          <input
+            type="email"
+            v-model="fields.email"
+            :ref="fields.email.ref"
+            class="w-full h-[40px] text-xs border border-gray-400 rounded-md px-3"
+            required
+          />
         </div>
 
         <div class="flex flex-col gap-y-2">
           <p>Password</p>
-          <input type="password" class="w-full h-[40px] text-xs border border-gray-400 rounded-md px-3" required />
+          <input
+            type="password"
+            v-model="fields.password"
+            :ref="fields.password.ref"
+            class="w-full h-[40px] text-xs border border-gray-400 rounded-md px-3"
+            required
+          />
         </div>
 
         <button type="submit" class="w-full h-[40px] text-white bg-green-700 rounded-md">Login</button>
