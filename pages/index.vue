@@ -5,7 +5,9 @@ useHead({
 </script>
 
 <template>
-  <div>home page</div>
+  <div class="h-full w-full flex justify-center items-center">
+    <NuxtLink to="/admin/login.vue">Go to admin login</NuxtLink>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
