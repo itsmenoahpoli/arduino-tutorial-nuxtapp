@@ -1,4 +1,12 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: "Admin Home",
+});
+
+definePageMeta({
+  layout: "auth",
+});
+</script>
 
 <template>
   <div></div>
