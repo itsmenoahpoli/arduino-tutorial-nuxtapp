@@ -2,9 +2,7 @@
 
 <template>
   <div class="h-screen w-full">
-    <div style="zoom: 0.85">
-      <slot />
-    </div>
+    <slot />
   </div>
 </template>
 

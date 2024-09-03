@@ -34,7 +34,7 @@ const onSubmit = handleSubmit((formData) => {
 </script>
 
 <template>
-  <div class="min-h-screen w-full flex justify-center items-center bg-slate-950">
+  <div class="min-h-screen w-full flex justify-center items-center bg-blue-900">
     <div class="w-[500px] bg-white rounded-md p-10">
       <h1 class="text-center text-xl font-bold">ADMIN LOGIN</h1>
 

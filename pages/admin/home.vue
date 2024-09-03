@@ -4,12 +4,12 @@ useHead({
 });
 
 definePageMeta({
-  layout: "auth",
+  layout: "admin",
 });
 </script>
 
 <template>
-  <div></div>
+  <div>should be admin layout</div>
 </template>
 
 <style lang="scss" scoped></style>
