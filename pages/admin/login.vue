@@ -24,7 +24,7 @@ const onSubmit = handleSubmit((formData) => {
   const { email, password } = formData as Credentials;
 
   if (email === "admin@domain.com" && password === "password") {
-    window.location.href = "/admin/home";
+    window.location.href = "/admin/videos";
 
     return;
   }
